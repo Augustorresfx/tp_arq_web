@@ -2,11 +2,11 @@
 
 **Proyecto para la materia Arquitectura Web - Implementado una API REST en NODE JS con Bun**
 
-Este proyecto fue desarrollado en base al "Curso Node Intensivo" del educador Alan Buscaglia (Gentleman Programming en youtube) en el cual demuestra con código la mayor parte de los conceptos vistos en clase, tales como 
+Este proyecto fue desarrollado en base al "Curso Node Intensivo" del educador Alan Buscaglia (Gentleman Programming en youtube).
 
 [Curso Node Intensivo](https://www.youtube.com/watch?v=z4x1OGfJkek&t=186s)
 
-## Tecnologías usadas
+## Características principales
 
 ESLint va a analizar estáticamente el código para encontrar problemas
 
