@@ -1,0 +1,30 @@
+
+REGISTER
+curl.exe -X POST "http://localhost:4001/auth/register" `
+>> -H "Content-Type: application/json" `
+>> -d '{\"email\":\"test@test.com\",\"password\":\"123456\", \"role\": \"admin\"}'
+
+LOGIN
+curl.exe -X POST "http://localhost:4001/auth/login" `
+>> -H "Content-Type: application/json" `
+>> -d '{\"email\":\"test@test.com\",\"password\":\"123456\"}'
+
+- devuelve el accessToken y refreshToken 
+
+GET BARBER
+
+curl.exe -X GET "http://localhost:4001/barber" `
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM3NDUwZDNmLWFmODAtNGU3Ny1hMjI5LWU1YmNkZjcwOWNkNyIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ5NjIzODIyLCJleHAiOjE3NDk2Mjc0MjJ9.1hhaHZtRtrjKk9BrttzpagF8mgyeQ6QVKY5DEO3oKHA" `
+-H "Content-Type: application/json"
+
+POST BARBER
+
+curl.exe -X POST "http://localhost:4001/barber" `
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM3NDUwZDNmLWFmODAtNGU3Ny1hMjI5LWU1YmNkZjcwOWNkNyIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ5NjIzODIyLCJleHAiOjE3NDk2Mjc0MjJ9.1hhaHZtRtrjKk9BrttzpagF8mgyeQ6QVKY5DEO3oKHA" `
+-H "Content-Type: application/json" `
+-d '{\"name\": \"NombreBarbero\", \"lastName\": \"ApellidoBarbero\"}'
+
+DELETE BARBER
+
+curl.exe -X DELETE "http://localhost:4001/barber/812633d9-dcf4-4c0f-837d-e26d3bfe1627" `
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM3NDUwZDNmLWFmODAtNGU3Ny1hMjI5LWU1YmNkZjcwOWNkNyIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ5NjIzODIyLCJleHAiOjE3NDk2Mjc0MjJ9.1hhaHZtRtrjKk9BrttzpagF8mgyeQ6QVKY5DEO3oKHA" `
