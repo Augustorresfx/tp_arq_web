@@ -14,37 +14,37 @@ curl.exe -X POST "http://localhost:4001/auth/login" `
 GET BARBER
 
 curl.exe -X GET "http://localhost:4001/barber" `
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhMTIxODI4LWViMGYtNGFlMi05ZDIzLWFlNTQwNzJmNGY1YSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0OTY5NDU3NCwiZXhwIjoxNzQ5Njk4MTc0fQ.rTMrkG3fscRlnXxAX1Taxre-4LjqaZ0lKUH0XYYLpXY" `
+-H "Authorization: Bearer " `
 -H "Content-Type: application/json"
 
 POST BARBER
 
 curl.exe -X POST "http://localhost:4001/barber" `
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhMTIxODI4LWViMGYtNGFlMi05ZDIzLWFlNTQwNzJmNGY1YSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0OTY5NDU3NCwiZXhwIjoxNzQ5Njk4MTc0fQ.rTMrkG3fscRlnXxAX1Taxre-4LjqaZ0lKUH0XYYLpXY" `
+-H "Authorization: Bearer " `
 -H "Content-Type: application/json" `
 -d '{\"name\": \"NombreBarbero\", \"lastName\": \"ApellidoBarbero\"}'
 
 DELETE BARBER
 
 curl.exe -X DELETE "http://localhost:4001/barber/1c66b1ff-6181-4e79-8157-49a126fa1dce" `
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhMTIxODI4LWViMGYtNGFlMi05ZDIzLWFlNTQwNzJmNGY1YSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0OTY5NDU3NCwiZXhwIjoxNzQ5Njk4MTc0fQ.rTMrkG3fscRlnXxAX1Taxre-4LjqaZ0lKUH0XYYLpXY" `
+-H "Authorization: Bearer " `
 
 GET APPOINTMENTS BY BARBER ID
 
 curl.exe -X GET "http://localhost:4001/barber/1c66b1ff-6181-4e79-8157-49a126fa1dce/appointment" `
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhMTIxODI4LWViMGYtNGFlMi05ZDIzLWFlNTQwNzJmNGY1YSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0OTY5NDU3NCwiZXhwIjoxNzQ5Njk4MTc0fQ.rTMrkG3fscRlnXxAX1Taxre-4LjqaZ0lKUH0XYYLpXY" `
+-H "Authorization: Bearer " `
 -H "Content-Type: application/json"
 
 GET APPOINTMENTS
 
 curl.exe -X GET "http://localhost:4001/appointment" `
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhMTIxODI4LWViMGYtNGFlMi05ZDIzLWFlNTQwNzJmNGY1YSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0OTY5NDU3NCwiZXhwIjoxNzQ5Njk4MTc0fQ.rTMrkG3fscRlnXxAX1Taxre-4LjqaZ0lKUH0XYYLpXY" `
+-H "Authorization: Bearer " `
 -H "Content-Type: application/json"
 
 POST APPOINTMENT
 
 curl.exe -X POST "http://localhost:4001/appointment" `
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhMTIxODI4LWViMGYtNGFlMi05ZDIzLWFlNTQwNzJmNGY1YSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0OTY5NDU3NCwiZXhwIjoxNzQ5Njk4MTc0fQ.rTMrkG3fscRlnXxAX1Taxre-4LjqaZ0lKUH0XYYLpXY" `
+-H "Authorization: Bearer " `
 -H "Content-Type: application/json" `
 -d '{ 
   \"name\": \"Corte Premium\", 
