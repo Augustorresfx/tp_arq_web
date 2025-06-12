@@ -44,12 +44,10 @@ export const barberRouter = async (
         const parts = url.split("/").filter(Boolean); // elimina cualquier elemento vacio como ""
         // ["", "barber", "123", "appointments"]
         // ["barber", "123", "appointments"]
-
-        if (parts.length === 3 && parts[2] === "appointments" && parts[1]) {
-            const id = parts[1];
+        if (parts.length === 3 && parts[2] === "appointment" && parts[1]) {
+            const id = parts[1] as string;
             const appointments = getAppointmentsByBarberId(id);
-
-            res.statusCode = 200;
+            res.statusCode = 200;  
             res.end(JSON.stringify(appointments));
             return;
         }

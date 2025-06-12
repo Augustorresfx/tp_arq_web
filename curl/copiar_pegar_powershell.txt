@@ -1,30 +1,57 @@
 
 REGISTER
 curl.exe -X POST "http://localhost:4001/auth/register" `
->> -H "Content-Type: application/json" `
->> -d '{\"email\":\"test@test.com\",\"password\":\"123456\", \"role\": \"admin\"}'
+-H "Content-Type: application/json" `
+-d '{\"email\":\"test@test.com\",\"password\":\"123456\", \"role\": \"admin\"}'
 
 LOGIN
 curl.exe -X POST "http://localhost:4001/auth/login" `
->> -H "Content-Type: application/json" `
->> -d '{\"email\":\"test@test.com\",\"password\":\"123456\"}'
+-H "Content-Type: application/json" `
+-d '{\"email\":\"test@test.com\",\"password\":\"123456\"}'
 
 - devuelve el accessToken y refreshToken 
 
 GET BARBER
 
 curl.exe -X GET "http://localhost:4001/barber" `
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM3NDUwZDNmLWFmODAtNGU3Ny1hMjI5LWU1YmNkZjcwOWNkNyIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ5NjIzODIyLCJleHAiOjE3NDk2Mjc0MjJ9.1hhaHZtRtrjKk9BrttzpagF8mgyeQ6QVKY5DEO3oKHA" `
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhMTIxODI4LWViMGYtNGFlMi05ZDIzLWFlNTQwNzJmNGY1YSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0OTY5NDU3NCwiZXhwIjoxNzQ5Njk4MTc0fQ.rTMrkG3fscRlnXxAX1Taxre-4LjqaZ0lKUH0XYYLpXY" `
 -H "Content-Type: application/json"
 
 POST BARBER
 
 curl.exe -X POST "http://localhost:4001/barber" `
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM3NDUwZDNmLWFmODAtNGU3Ny1hMjI5LWU1YmNkZjcwOWNkNyIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ5NjIzODIyLCJleHAiOjE3NDk2Mjc0MjJ9.1hhaHZtRtrjKk9BrttzpagF8mgyeQ6QVKY5DEO3oKHA" `
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhMTIxODI4LWViMGYtNGFlMi05ZDIzLWFlNTQwNzJmNGY1YSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0OTY5NDU3NCwiZXhwIjoxNzQ5Njk4MTc0fQ.rTMrkG3fscRlnXxAX1Taxre-4LjqaZ0lKUH0XYYLpXY" `
 -H "Content-Type: application/json" `
 -d '{\"name\": \"NombreBarbero\", \"lastName\": \"ApellidoBarbero\"}'
 
 DELETE BARBER
 
-curl.exe -X DELETE "http://localhost:4001/barber/812633d9-dcf4-4c0f-837d-e26d3bfe1627" `
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM3NDUwZDNmLWFmODAtNGU3Ny1hMjI5LWU1YmNkZjcwOWNkNyIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ5NjIzODIyLCJleHAiOjE3NDk2Mjc0MjJ9.1hhaHZtRtrjKk9BrttzpagF8mgyeQ6QVKY5DEO3oKHA" `
+curl.exe -X DELETE "http://localhost:4001/barber/1c66b1ff-6181-4e79-8157-49a126fa1dce" `
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhMTIxODI4LWViMGYtNGFlMi05ZDIzLWFlNTQwNzJmNGY1YSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0OTY5NDU3NCwiZXhwIjoxNzQ5Njk4MTc0fQ.rTMrkG3fscRlnXxAX1Taxre-4LjqaZ0lKUH0XYYLpXY" `
+
+GET APPOINTMENTS BY BARBER ID
+
+curl.exe -X GET "http://localhost:4001/barber/1c66b1ff-6181-4e79-8157-49a126fa1dce/appointment" `
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhMTIxODI4LWViMGYtNGFlMi05ZDIzLWFlNTQwNzJmNGY1YSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0OTY5NDU3NCwiZXhwIjoxNzQ5Njk4MTc0fQ.rTMrkG3fscRlnXxAX1Taxre-4LjqaZ0lKUH0XYYLpXY" `
+-H "Content-Type: application/json"
+
+GET APPOINTMENTS
+
+curl.exe -X GET "http://localhost:4001/appointment" `
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhMTIxODI4LWViMGYtNGFlMi05ZDIzLWFlNTQwNzJmNGY1YSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0OTY5NDU3NCwiZXhwIjoxNzQ5Njk4MTc0fQ.rTMrkG3fscRlnXxAX1Taxre-4LjqaZ0lKUH0XYYLpXY" `
+-H "Content-Type: application/json"
+
+POST APPOINTMENT
+
+curl.exe -X POST "http://localhost:4001/appointment" `
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJhMTIxODI4LWViMGYtNGFlMi05ZDIzLWFlNTQwNzJmNGY1YSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0OTY5NDU3NCwiZXhwIjoxNzQ5Njk4MTc0fQ.rTMrkG3fscRlnXxAX1Taxre-4LjqaZ0lKUH0XYYLpXY" `
+-H "Content-Type: application/json" `
+-d '{ 
+  \"name\": \"Corte Premium\", 
+  \"start\": \"2025-06-11T15:00:00.000Z\", 
+  \"minutesDuration\": 45, 
+  \"price\": 2000, 
+  \"barberId\": \"1c66b1ff-6181-4e79-8157-49a126fa1dce\", 
+  \"clientEmail\": \"cliente@ejemplo.com\" 
+}'
+

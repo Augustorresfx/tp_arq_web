@@ -47,6 +47,11 @@ export const appointmentRouter = async (
         }
 
         const body = await parseBody(req);
+
+        if (typeof body.start === "string") {
+            body.start = new Date(body.start);
+        }
+        
         const { output, issues } = safeParse(appointmentSchema, body);
 
         if (issues) {
