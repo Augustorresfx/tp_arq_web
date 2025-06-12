@@ -6,7 +6,7 @@ Este proyecto fue desarrollado en base al "Curso Node Intensivo" del educador Al
 
 [Curso Node Intensivo](https://www.youtube.com/watch?v=z4x1OGfJkek&t=186s)
 
-## Características principales
+## Acerca de las tecnologías usadas
 
 ESLint va a analizar estáticamente el código para encontrar problemas
 
