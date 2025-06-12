@@ -1,10 +1,12 @@
 
 REGISTER
+
 curl.exe -X POST "http://localhost:4001/auth/register" `
 -H "Content-Type: application/json" `
 -d '{\"email\":\"test@test.com\",\"password\":\"123456\", \"role\": \"admin\"}'
 
 LOGIN
+
 curl.exe -X POST "http://localhost:4001/auth/login" `
 -H "Content-Type: application/json" `
 -d '{\"email\":\"test@test.com\",\"password\":\"123456\"}'
@@ -54,4 +56,3 @@ curl.exe -X POST "http://localhost:4001/appointment" `
   \"barberId\": \"1c66b1ff-6181-4e79-8157-49a126fa1dce\", 
   \"clientEmail\": \"cliente@ejemplo.com\" 
 }'
-

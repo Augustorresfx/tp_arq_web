@@ -5,7 +5,6 @@ import config from "./config";
 const corsMiddleware = cors();
 
 const server = createServer(async (req, res) => {
-    console.log("📥 Nueva petición recibida:", req.method, req.url);
     corsMiddleware(req, res, async () => {
         res.setHeader("Content-Type", "application/json");
 
